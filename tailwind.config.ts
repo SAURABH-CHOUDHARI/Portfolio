@@ -1,13 +1,18 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
-    darkMode: 'class', // important for next-themes to work
+    darkMode: 'class',
     content: [
         './index.html',
         './src/**/*.{js,ts,jsx,tsx}',
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                '8bit': ['"Press Start 2P"', 'cursive'],
+                '16bit': ['"VT323"', 'monospace'],
+            },
+        },
     },
     plugins: [],
 }
