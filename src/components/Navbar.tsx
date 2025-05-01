@@ -49,10 +49,10 @@ export const Navbar = () => {
     return (
         <>
             <header
-                className={`fixed top-0 left-0 w-full transition-all duration-300 ${scrolled ? 'backdrop-blur-lg bg-background/90 shadow-md py-2' : 'bg-transparent py-4'
+                className={`fixed top-0 z-50 left-0 w-full text-xl font-16bit  transition-all duration-300 ${scrolled ? 'backdrop-blur-lg bg-background/90 shadow-md py-2' : 'bg-transparent py-4'
                     }`}
             >
-                <nav className="container mx-auto flex items-center justify-between px-6">
+                <nav className="container  mx-auto max-w-screen-xl flex items-center justify-between px-6">
                     <div className="text-2xl font-bold">
                         <span className="bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">Saurabh</span>
                     </div>
@@ -90,7 +90,7 @@ export const Navbar = () => {
 
             {/* Conditional Mobile Menu Backdrop */}
             {isMenuOpen && (
-                <div className="fixed inset-0 bg-black/60 backdrop-blur-sm md:hidden">
+                <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm md:hidden">
                     <div
                         id="mobile-menu"
                         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
