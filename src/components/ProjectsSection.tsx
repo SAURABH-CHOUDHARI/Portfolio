@@ -22,11 +22,11 @@ const ProjectsSection = () => {
         },
         {
             id: 3,
-            title: "RETRO DASHBOARD",
-            description: "Business analytics dashboard with a nostalgic 8-bit UI theme.",
-            tags: ["React", "D3.js", "ShadCN"],
-            image: "/assets/dashboard.png",
-            url: "https://dashboard.example.com" // Add your actual URL here
+            title: "GRAM",
+            description: "A Social Media App",
+            tags: ["React", "Express", "Socket.io","MongoDB","Redis","AI"],
+            image: "/project_gram.png",
+            url: "https://gram-ll0f.onrender.com" // Add your actual URL here
         }
     ];
 
@@ -88,7 +88,7 @@ const ProjectsSection = () => {
                                 src={project.image}
                                 alt={project.title}
                                 className="
-                  w-full h-48 object-contain mb-4
+                  w-full h-52 object-contain mb-4
                   border-4 border-solid
                   [border-image:linear-gradient(to_bottom,#ff00ff,#00ffff)_1]
                 "
