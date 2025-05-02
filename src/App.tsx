@@ -4,7 +4,9 @@ import SPA from './pages/SPA';
 function App() {
   return (
     <ThemeProvider>
+      <div className='bg-black'>
       <SPA />
+      </div>
     </ThemeProvider>
   );
 }
