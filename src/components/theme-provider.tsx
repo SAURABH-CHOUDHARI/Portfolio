@@ -1,5 +1,6 @@
+import { ThemeProvider as NextThemesProvider, ThemeProviderProps as NextThemeProviderProps } from "next-themes"
 
-import { ThemeProvider as NextThemesProvider } from "next-themes"
+interface ThemeProviderProps extends NextThemeProviderProps {}
 
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
     return (

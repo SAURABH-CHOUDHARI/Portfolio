@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 export default function NeumorphicContactSection() {
     const [typedText, setTypedText] = useState("");
     const fullText = " Let's connect and create something amazing!";
-    const [hoveredIcon, setHoveredIcon] = useState(null);
+    const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
     const [currentBg, setCurrentBg] = useState("");
-    
+
     // Random background selection
     useEffect(() => {
         const backgrounds = [
@@ -18,7 +18,7 @@ export default function NeumorphicContactSection() {
         const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
         setCurrentBg(randomBg);
     }, []);
-    
+
     // Typing animation
     useEffect(() => {
         let index = 0;
@@ -70,7 +70,7 @@ export default function NeumorphicContactSection() {
         <div
             id="contact-section"
             className="relative w-full  py-16 font-sans"
-            style={{ 
+            style={{
                 backgroundImage: `url('${currentBg}')`,
                 backgroundSize: "cover",
                 backgroundPosition: "center"
@@ -78,7 +78,7 @@ export default function NeumorphicContactSection() {
         >
             {/* Overlay */}
             <div className="absolute inset-0  bg-opacity-80 z-0"></div>
-            
+
             {/* Main Content */}
             <div className="container mx-auto px-4 relative z-10">
                 {/* Section Title */}
@@ -148,7 +148,7 @@ export default function NeumorphicContactSection() {
                                 transition={{ duration: 0.5, delay: 0.2 + (index * 0.1) }}
                                 onMouseEnter={() => setHoveredIcon(link.id)}
                                 onMouseLeave={() => setHoveredIcon(null)}
-                                whileHover={{ 
+                                whileHover={{
                                     scale: 1.02,
                                 }}
                                 whileTap={{ scale: 0.98 }}
@@ -163,7 +163,7 @@ export default function NeumorphicContactSection() {
                                     </div>
                                     <motion.div
                                         className="mt-2 text-xl text-gray-800"
-                                        animate={{ 
+                                        animate={{
                                             x: hoveredIcon === link.id ? [0, 5, 0] : 0
                                         }}
                                         transition={{ duration: 0.8, repeat: hoveredIcon === link.id ? Infinity : 0 }}
@@ -192,21 +192,23 @@ export default function NeumorphicContactSection() {
                 </div>
             </div>
 
-            <style jsx global>{`
-                .shadow-neumorph {
-                    background: rgba(240, 240, 240, 0.8);
-                    box-shadow: 8px 8px 16px rgba(163, 163, 163, 0.6), -8px -8px 16px rgba(255, 255, 255, 0.8);
-                    backdrop-filter: blur(5px);
-                }
-                
-                a.shadow-neumorph:hover {
-                    box-shadow: 6px 6px 12px rgba(163, 163, 163, 0.6), -6px -6px 12px rgba(255, 255, 255, 0.8), inset 2px 2px 5px rgba(0,0,0,0.05);
-                }
-                
-                .shadow-neumorph:active {
-                    box-shadow: inset 8px 8px 16px rgba(163, 163, 163, 0.6), inset -8px -8px 16px rgba(255, 255, 255, 0.8);
-                }
-            `}</style>
+            <style>
+                {`
+        .shadow-neumorph {
+            background: rgba(240, 240, 240, 0.8);
+            box-shadow: 8px 8px 16px rgba(163, 163, 163, 0.6), -8px -8px 16px rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        a.shadow-neumorph:hover {
+            box-shadow: 6px 6px 12px rgba(163, 163, 163, 0.6), -6px -6px 12px rgba(255, 255, 255, 0.8), inset 2px 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .shadow-neumorph:active {
+            box-shadow: inset 8px 8px 16px rgba(163, 163, 163, 0.6), inset -8px -8px 16px rgba(255, 255, 255, 0.8);
+        }
+    `}
+            </style>
         </div>
     );
 }
