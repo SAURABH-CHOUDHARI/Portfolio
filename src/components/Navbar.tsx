@@ -53,8 +53,8 @@ export const Navbar = () => {
                     }`}
             >
                 <nav className="container  mx-auto max-w-screen-xl flex items-center justify-between px-6">
-                    <div className="text-2xl font-bold">
-                        <span className="bg-gradient-to-r from-primary to-blue-500 bg-clip-text text-transparent">Saurabh</span>
+                    <div className="text-4xl font-bold">
+                        <span className="bg-gradient-to-r  from-primary to-blue-500 bg-clip-text text-transparent">Saurabh</span>
                     </div>
 
                     {/* Desktop Nav */}
@@ -64,7 +64,7 @@ export const Navbar = () => {
                         <NavbarLink href="#projects" label="Projects" />
                         <NavbarLink href="#contact" label="Contact" />
 
-                        <Button className="bg-gradient-to-r from-primary to-blue-500 hover:opacity-90 transition-all"
+                        <Button className="bg-gradient-to-r text-lg text-black from-primary to-blue-500 hover:opacity-90 transition-all"
                             onClick={() => {
                                 window.open("https://drive.google.com/file/d/1gvfDYzp7g4gVAz0hcyFVtnNDbb0XzKf6/view?usp=drive_link", "_blank");
                                 setIsMenuOpen(false);
