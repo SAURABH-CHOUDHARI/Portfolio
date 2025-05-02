@@ -1,9 +1,10 @@
 'use client'
 
-import { AboutSection } from '../components/AboutSection'
+import  AboutSection  from '../components/AboutSection'
 import { Navbar } from '../components/Navbar'
 import ProjectsSection from '../components/ProjectsSection'
 import RetroCharacter from '../components/RetroCharacter'
+import RetroContactSection from '../components/RetroContactSection'
 
 const SPA = () => {
     return (
@@ -28,6 +29,12 @@ const SPA = () => {
                 <section id="projects" className="  ">
                     <div className="w-full max-w-screen-xl mx-auto ">
                         <ProjectsSection/>
+                    </div>
+                </section>
+
+                <section id="contact" className="  ">
+                    <div className="w-full max-w-screen-xl mx-auto ">
+                        <RetroContactSection/>
                     </div>
                 </section>
 
