@@ -24,7 +24,7 @@ export default function RetroCharacter() {
     // For random background
     useEffect(() => {
         const randomIndex = Math.floor(Math.random() * 4);
-        setRandomBg(`/bg_hero${randomIndex}.webp`);
+        setRandomBg(`/bg_hero${randomIndex}.gif`);
     }, []);
 
     return (
