@@ -10,7 +10,7 @@ const ProjectsSection = () => {
             description: "A Digital Privacy Manager",
             tags: ["React", "GO (FIBER)", "REST API's","REDIS", "PostgreSQL", "AWS","WebAuthn","TOTP","Tailwind"],
             image: "/project_privguard.png",
-            url: "https://privguard.netlify.app" // Add your actual URL here
+            url: "https://privguard.netlify.app" 
         },
         {
             id: 2,
@@ -18,7 +18,7 @@ const ProjectsSection = () => {
             description: "A communtiy Platform to People to Interact using Audio, Video and Text channels",
             tags: ["NextJS", "LiveKit", "PostgreSQL", "Prisma ORM","Socket.io"],
             image: "/project_community.png",
-            url: "https://community-9rw3.onrender.com" // Add your actual URL here
+            url: "https://community-4vvl.onrender.com" 
         },
         {
             id: 3,
@@ -26,7 +26,7 @@ const ProjectsSection = () => {
             description: "A Social Media App",
             tags: ["React", "Express", "Socket.io","MongoDB","Redis","AI"],
             image: "/project_gram.png",
-            url: "https://gram-ll0f.onrender.com" // Add your actual URL here
+            url: "https://gram-ll0f.onrender.com" 
         }
     ];
 
